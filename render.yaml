@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: n8n
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: n8n start
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "hafiz"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "noreply64#64"
+      - key: N8N_HOST
+        value: "n8n.onrender.com"
+      - key: N8N_PORT
+        value: "10000"
+      - key: WEBHOOK_URL
+        value: "https://n8n.onrender.com/"
